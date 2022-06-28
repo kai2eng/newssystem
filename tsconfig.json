@@ -13,6 +13,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false, //存在隐含的any类型时不报错
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
