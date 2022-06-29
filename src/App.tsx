@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect } from "react";
+import { HashRouter } from "react-router-dom";
 import "./App.css";
 import IndexRouter from "./router/IndexRouter";
 
@@ -12,5 +13,9 @@ export default function App() {
       });
   }, []);
 
-  return <IndexRouter></IndexRouter>;
+  return (
+    <HashRouter>
+      <IndexRouter></IndexRouter>
+    </HashRouter>
+  );
 }
