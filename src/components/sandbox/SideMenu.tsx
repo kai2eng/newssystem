@@ -36,51 +36,50 @@ const items = [
       },
     ],
   },
-  // {
-  //   key: "3",
-  //   icon: <UserOutlined />,
-  //   label: "ユーザー",
-  //   children: [
-  //     {
-  //       key: "3-1",
-  //       label: "test",
-  //       icon: <TeamOutlined />,
-  //     },
-  //   ],
-  // },
-  // {
-  //   key: "4",
-  //   icon: <AreaChartOutlined />,
-  //   label: "事件管理",
-  //   children: [
-  //     {
-  //       key: "4-1",
-  //       label: "アップロード申請",
-  //       icon: <TeamOutlined />,
-  //     },
-  //     {
-  //       key: "4-1",
-  //       label: "空間申請",
-  //       icon: <TeamOutlined />,
-  //     },
-  //   ],
-  // },
-  // {
-  //   key: "5",
-  //   icon: <AreaChartOutlined />,
-  //   label: "レポート",
-  //   children: [
-  //     {
-  //       key: "5-1",
-  //       label: "test",
-  //       icon: <TeamOutlined />,
-  //     },
-  //   ],
-  // },
+  {
+    key: "3",
+    icon: <UserOutlined />,
+    label: "ユーザー",
+    children: [
+      {
+        key: "3-1",
+        label: "test",
+        icon: <TeamOutlined />,
+      },
+    ],
+  },
+  {
+    key: "4",
+    icon: <AreaChartOutlined />,
+    label: "事件管理",
+    children: [
+      {
+        key: "4-1",
+        label: "アップロード申請",
+        icon: <TeamOutlined />,
+      },
+      {
+        key: "4-1",
+        label: "空間申請",
+        icon: <TeamOutlined />,
+      },
+    ],
+  },
+  {
+    key: "5",
+    icon: <AreaChartOutlined />,
+    label: "レポート",
+    children: [
+      {
+        key: "5-1",
+        label: "test",
+        icon: <TeamOutlined />,
+      },
+    ],
+  },
 ];
 
-export default function SideMenu(props) {
-  useNavigate();
+export default function SideMenu() {
   const renderMenu = (
     items: {
       key: string;
@@ -100,9 +99,6 @@ export default function SideMenu(props) {
         mode="inline"
         defaultSelectedKeys={["1"]}
         {...renderMenu(items)}
-        onClick={() => {
-          props.history.push(items.keys);
-        }}
       />
     </Sider>
   );
