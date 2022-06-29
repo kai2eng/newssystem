@@ -1,40 +1,155 @@
-import React from 'react'
-import { Layout, Menu } from 'antd';
+import React from "react";
+import { Layout, Menu } from "antd";
 import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  UploadOutlined,
+  HomeOutlined,
+  TeamOutlined,
+  AreaChartOutlined,
   UserOutlined,
-  VideoCameraOutlined,
-} from '@ant-design/icons';
+} from "@ant-design/icons";
+import "./index.css";
 const { Sider } = Layout;
+
+//模拟数组结构
+// const items = [
+//   {
+//     key: "/home",
+//     icon: <HomeOutlined />,
+//     label: "ホーム",
+//   },
+//   {
+//     key: "/user-manage/list",
+//     icon: <TeamOutlined />,
+//     label: "カスタマイズ",
+//     children: [
+//       {
+//         key: "/right-manage/role/list",
+//         label: "権限管理",
+//         icon: <TeamOutlined />,
+//       },
+//       {
+//         key: "/right-manage/right/list",
+//         label: "スペース管理",
+//         icon: <TeamOutlined />,
+//       },
+//     ],
+//   },
+//   {
+//     key: "3",
+//     icon: <UserOutlined />,
+//     label: "ユーザー",
+//     children: [
+//       {
+//         key: "3-1",
+//         label: "test",
+//         icon: <TeamOutlined />,
+//       },
+//     ],
+//   },
+//   {
+//     key: "4",
+//     icon: <AreaChartOutlined />,
+//     label: "事件管理",
+//     children: [
+//       {
+//         key: "4-1",
+//         label: "アップロード申請",
+//         icon: <TeamOutlined />,
+//       },
+//       {
+//         key: "4-1",
+//         label: "空間申請",
+//         icon: <TeamOutlined />,
+//       },
+//     ],
+//   },
+//   {
+//     key: "5",
+//     icon: <AreaChartOutlined />,
+//     label: "レポート",
+//     children: [
+//       {
+//         key: "5-1",
+//         label: "test",
+//         icon: <TeamOutlined />,
+//       },
+//     ],
+//   },
+// ];
 
 export default function SideMenu() {
   return (
-    <Sider trigger={null} collapsible >
-      <div className="logo" />
+    <Sider trigger={null} collapsible collapsed={false}>
+      <div className="logo">Tera Box</div>
       <Menu
         theme="dark"
         mode="inline"
-        defaultSelectedKeys={['1']}
+        defaultSelectedKeys={["1"]}
         items={[
           {
-            key: '1',
+            key: "1",
+            icon: <HomeOutlined />,
+            label: "ホーム",
+          },
+          {
+            key: "2",
+            icon: <TeamOutlined />,
+            label: "カスタマイズ",
+            children: [
+              {
+                key: "2-1",
+                label: "権限管理",
+                icon: <TeamOutlined />,
+              },
+              {
+                key: "2-2",
+                label: "スペース管理",
+                icon: <TeamOutlined />,
+              },
+            ],
+          },
+          {
+            key: "3",
             icon: <UserOutlined />,
-            label: 'nav 1',
+            label: "ユーザー",
+            children: [
+              {
+                key: "3-1",
+                label: "test",
+                icon: <TeamOutlined />,
+              },
+            ],
           },
           {
-            key: '2',
-            icon: <VideoCameraOutlined />,
-            label: 'nav 2',
+            key: "4",
+            icon: <AreaChartOutlined />,
+            label: "事件管理",
+            children: [
+              {
+                key: "4-1",
+                label: "アップロード申請",
+                icon: <TeamOutlined />,
+              },
+              {
+                key: "4-1",
+                label: "空間申請",
+                icon: <TeamOutlined />,
+              },
+            ],
           },
           {
-            key: '3',
-            icon: <UploadOutlined />,
-            label: 'nav 3',
+            key: "5",
+            icon: <AreaChartOutlined />,
+            label: "レポート",
+            children: [
+              {
+                key: "5-1",
+                label: "test",
+                icon: <TeamOutlined />,
+              },
+            ],
           },
         ]}
       />
     </Sider>
-  )
+  );
 }

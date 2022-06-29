@@ -6,8 +6,8 @@ import Home from "./home/Home";
 import UserList from "./user-manage/UserList";
 import RoleList from "./right-manage/RoleList";
 import RightList from "./right-manage/RightList";
-import { Layout, Menu } from 'antd';
-import './SandBox.css'
+import { Layout, Menu } from "antd";
+import "./SandBox.css";
 const { Content } = Layout;
 
 export default function SandBox() {
@@ -19,7 +19,7 @@ export default function SandBox() {
         <Content
           className="site-layout-background"
           style={{
-            margin: '24px 16px',
+            margin: "24px 16px",
             padding: 24,
             minHeight: 280,
           }}
