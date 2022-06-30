@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate, Outlet, Route, Routes } from "react-router-dom";
+import { Navigate, NavLink, Outlet, Route, Routes } from "react-router-dom";
 import SideMenu from "../../components/sandbox/SideMenu";
 import TopHeader from "../../components/sandbox/TopHeader";
 import Home from "./home/Home";
@@ -26,11 +26,6 @@ export default function SandBox() {
             minHeight: 280,
           }}
         >
-          {/* <Routes>
-            <Route index element={<Home />} />
-            <Route path="costoms-manage" element={<CostomsList />} />
-            <Route path="user-manage" element={<UserList />} />
-          </Routes> */}
           <Outlet />
         </Content>
       </Layout>
