@@ -1,25 +1,78 @@
 {
-  "posts": [
+  "items": [
     {
-      "title": "zeng",
-      "id": 1,
-      "sex": "ssss"
+      "id":1,
+      "key": "home",
+      "label": "ホーム"
     },
     {
-      "title": "1",
-      "id": "2"
+      "id":2,
+      "key": "costom",
+      "label": "カスタマ"
     },
     {
-      "id": "1333",
-      "title": "json123rver",
-      "author": "typ222ode"
+      "id":3,
+      "key": "user",
+      "label": "ユーザー"
+    },
+    {
+      "id":4,
+      "key": "report",
+      "label": "レポート"
     }
   ],
-  "comments": [
+  "children": [
     {
-      "id": 1,
-      "body": "some 123123comment",
-      "postId": 1
+      "itemId":2,
+      "key": "right-manage/role/list",
+      "label": "権限管理"
+    },
+    {
+      "itemId":2,
+      "key": "right-manage/right/list",
+      "label": "スペース管理"
+    },
+    {
+      "itemId":3,
+      "key": "user/using",
+      "label": "使用状況"
+    }
+  ],
+  "right":[
+    {
+      "key": "1",
+      "name":"方正 太郎",
+      "company": "HOUSEI株式会社",
+      "space": "50G",
+      "used-space":"34.6G"
+    },
+    {
+      "key": "2",
+      "name":"方正 太郎",
+      "company": "HOUSEI株式会社",
+      "space": "50G",
+      "used-space":"34.6G"
+    },
+    {
+      "key": "3",
+      "name":"方正 太郎",
+      "company": "HOUSEI株式会社",
+      "space": "50G",
+      "used-space":"34.6G"
+    },
+    {
+      "key": "4",
+      "name":"方正 太郎",
+      "company": "HOUSEI株式会社",
+      "space": "50G",
+      "used-space":"34.6G"
+    },
+    {
+      "key": "5",
+      "name":"方正 太郎",
+      "company": "HOUSEI株式会社",
+      "space": "50G",
+      "used-space":"34.6G"
     }
   ]
 }

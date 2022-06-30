@@ -21,9 +21,9 @@ export default function Home() {
     // //删除
     // axios.delete("http://localhost:5010/posts/2");
     //向下连接_embed
-    axios.get("http://localhost:5010/posts?_embed=comments").then((res) => {
-      console.log(res.data);
-    });
+    // axios.get("http://localhost:5010/items?_embed=children").then((res) => {
+    //   console.log(res.data);
+    // });
     //向上查找_expand
   };
   return (

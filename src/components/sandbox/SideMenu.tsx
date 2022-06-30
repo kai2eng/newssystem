@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Layout, Menu } from "antd";
 import {
   HomeOutlined,
@@ -8,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import "./index.css";
 import { Link, Navigate, Route, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const { Sider } = Layout;
 
@@ -24,7 +25,7 @@ export default function SideMenu() {
       },
     },
     {
-      key: "/user-manage/list",
+      key: "user-manage/list",
       icon: <TeamOutlined />,
       label: "カスタマ",
       children: [
@@ -40,6 +41,9 @@ export default function SideMenu() {
           key: "/right-manage/right/list",
           label: "スペース管理",
           icon: <TeamOutlined />,
+          onClick: function () {
+            navigate("space-manage");
+          },
         },
       ],
     },
@@ -50,7 +54,7 @@ export default function SideMenu() {
       children: [
         {
           key: "3-1",
-          label: "test",
+          label: "行為管理",
           icon: <TeamOutlined />,
           onClick: function () {
             navigate("user-manage");
@@ -92,15 +96,25 @@ export default function SideMenu() {
   //渲染侧边栏
   const renderMenu = (
     items: {
+      id?: number;
       key: string;
       icon: JSX.Element;
       label: string;
-      onCliek?: () => void;
       children?: { key: string; label: string; icon: JSX.Element }[];
     }[]
   ) => {
     return { items };
   };
+
+  //数据取于后端
+  // useEffect(() => {
+  //   axios.get("http://localhost:5010/items?_embed=children").then((res) => {
+  //     console.log(res.data);
+  //     console.log(items);
+  //     setMenu(res.data);
+  //   });
+  // }, []);
+  // const [menu, setMenu] = useState([]);
 
   return (
     <Sider trigger={null} collapsible collapsed={false}>

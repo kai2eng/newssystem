@@ -6,6 +6,7 @@ import Error from "../views/error/Error";
 import Home from "../views/sandbox/home/Home";
 import UserList from "../views/sandbox/user-manage/UserList";
 import CostomsList from "../views/sandbox/costomslist/CostomsList";
+import RightList from "../views/sandbox/right-manage/RightList";
 export default function IndexRouter() {
   return (
     <Routes>
@@ -13,6 +14,7 @@ export default function IndexRouter() {
       <Route path="/sandbox" element={<SandBox />}>
         <Route index path="home" element={<Home />} />
         <Route path="costoms-manage" element={<CostomsList />} />
+        <Route path="space-manage" element={<RightList />} />
         <Route path="user-manage" element={<UserList />} />
         <Route path="*" element={<Navigate to="/sandbox/home" />} />
         <Route path="" element={<Navigate to="/sandbox/home" />} />
