@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "title": "zeng",
+      "id": 1,
+      "sex": "ssss"
+    },
+    {
+      "title": "1",
+      "id": "2"
+    },
+    {
+      "id": "1333",
+      "title": "json123rver",
+      "author": "typ222ode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some 123123comment",
+      "postId": 1
+    }
+  ]
+}
