@@ -2,11 +2,6 @@ import React from "react";
 import { Navigate, NavLink, Outlet, Route, Routes } from "react-router-dom";
 import SideMenu from "../../components/sandbox/SideMenu";
 import TopHeader from "../../components/sandbox/TopHeader";
-import Home from "./home/Home";
-import UserList from "./user-manage/UserList";
-import RoleList from "./right-manage/RoleList";
-import RightList from "./right-manage/RightList";
-import CostomsList from "./costomslist/CostomsList";
 import { Layout, Menu } from "antd";
 import "./SandBox.css";
 
